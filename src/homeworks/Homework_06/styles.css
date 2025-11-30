@@ -1,0 +1,28 @@
+.cars_container {
+  display: flex;
+  padding: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.cars_container h1 {
+  width: 100%;
+  text-align: center;
+}
+.car_card {
+  background-color: beige;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.car_brand {
+  color: brown;
+  margin: 10px;
+}
+.car_price {
+  margin: 10px;
+}
+.car_fuel {
+  margin: 10px;
+}
