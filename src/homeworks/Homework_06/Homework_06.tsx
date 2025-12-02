@@ -1,10 +1,7 @@
+import { v4 } from "uuid";
 import "./styles.css";
+import {type Car} from "./types"
 
-interface Car {
-  brand: string;
-  price: number;
-  isDiesel: boolean;
-}
 const cars: Car[] = [
   { brand: "BMW", price: 20000, isDiesel: true },
   { brand: "Mercedes", price: 22000, isDiesel: false },
@@ -13,9 +10,9 @@ const cars: Car[] = [
   { brand: "Audi", price: 50000, isDiesel: true },
 ];
 
-const carsCard = cars.map((car, index) => {
+const carsCard = cars.map((car : Car) => {
   return (
-    <div key={index} className="car_card">
+    <div key={v4()} className="car_card">
       <h2 className="car_brand">Модель : {car.brand}</h2>
       <p className="car_price">Цена : {car.price}</p>
       <p className="car_fuel">
