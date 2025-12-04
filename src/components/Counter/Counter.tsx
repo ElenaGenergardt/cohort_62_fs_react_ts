@@ -1,13 +1,9 @@
-
-
-
 import Button from "components/Button/Button";
 
 import "./styles.css";
 import { type CounterProps } from "./types";
-function Counter({count, onMinus,onPlus} : CounterProps) {
-
- return (
+function Counter({ count, onMinus, onPlus }: CounterProps) {
+  return (
     <div className="counter_wrapper">
       <div className="button_control">
         <Button name="-" onClick={onMinus} />
