@@ -6,15 +6,14 @@ export const PageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex: 1;
+  padding: 100px;
   gap: 30px;
 `;
 
 export const Paragraph = styled.p`
-  font-size: 30px;
-  font-weight: bold;
-  color: black;
+  color: blue;
 `;
 
-export const ButtonControl = styled.div`
+export const FormElementContainer = styled.div`
   width: 300px;
 `;
