@@ -1,28 +1,30 @@
-.cars_container {
+import styled from "@emotion/styled";
+
+export const CarsContainer = styled.div`
   display: flex;
   padding: 30px;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-}
-.cars_container h1 {
+`;
+export const CarsContainerH1 = styled.h1`
   width: 100%;
   text-align: center;
-}
-.car_card {
+`;
+export const CarCard = styled.div`
   background-color: beige;
   width: 400px;
   padding: 20px;
   border-radius: 10px;
   border: 2px solid black;
-}
-.car_brand {
+`;
+export const CarBrand = styled.h2`
   color: brown;
   margin: 10px;
-}
-.car_price {
+`;
+export const CarPrice = styled.p`
   margin: 10px;
-}
-.car_fuel {
+`;
+export const CarFuel = styled.p`
   margin: 10px;
-}
+`;

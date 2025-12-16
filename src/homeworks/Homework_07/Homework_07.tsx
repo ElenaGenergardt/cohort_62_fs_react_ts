@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "./styles.css";
+import {HomeworkContainer, HomeworkContainerH1} from "./styles";
 import Feedback from "components/Feedback/Feedback";
 
 function Homework_07() {
@@ -22,8 +22,8 @@ function Homework_07() {
     setDislike(0);
   };
   return (
-    <div className="homework_container">
-      <h1>Homework_07_Feedback</h1>
+    <HomeworkContainer>
+      <HomeworkContainerH1>Homework_07_Feedback</HomeworkContainerH1>
       <Feedback
         like={like}
         dislike={dislike}
@@ -31,7 +31,7 @@ function Homework_07() {
         onDislike={onDislike}
         resetResult={resetResults}
       />
-    </div>
+    </HomeworkContainer>
   );
 }
 
