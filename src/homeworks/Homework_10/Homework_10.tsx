@@ -7,7 +7,7 @@ function Homework_10() {
   const [randomJoke, setRandomJoke] = useState<string | undefined>(undefined);
   const [error, setError] = useState<string | undefined>(undefined);
 
-  const RANDOM_JOKE = "https://official-joke-api.appspot.com/random_joke";
+  const RANDOM_JOKE : string = "https://official-joke-api.appspot.com/random_joke";
 
   const getRandonJoke = async () => {
     try {
@@ -16,7 +16,6 @@ function Homework_10() {
 
       const response = await axios.get(RANDOM_JOKE);
       setRandomJoke(response.data.setup);
-
     } catch (error: any) {
       setError("Some Network Error");
     }
@@ -30,8 +29,8 @@ function Homework_10() {
     <PageWrapper>
       <Card>
         <ContainerFacts>
-          <Text>{randomJoke}</Text>
-          <ErrorText>{error}</ErrorText>
+          {!!randomJoke} && <Text>{randomJoke}</Text>
+          {!!error && <ErrorText>{error}</ErrorText>}
         </ContainerFacts>
         <Button name={"New joke"} onClick={getRandonJoke} />
       </Card>

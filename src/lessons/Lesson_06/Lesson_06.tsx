@@ -1,4 +1,4 @@
-import "./styles.css"
+import {Lesson06PageWrapper} from "./styles";
 
 function Lesson_06 (){
   // 1 тип. string - строковый тип
@@ -122,9 +122,9 @@ function Lesson_06 (){
   let fontColor: Color = "red";
   fontColor = null;
 
-    return <div className="lesson_06_page_wrapper">
+    return <Lesson06PageWrapper>
         Lesson 06
-    </div>
+    </Lesson06PageWrapper>
 }
 
 export default Lesson_06;

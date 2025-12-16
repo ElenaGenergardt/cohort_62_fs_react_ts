@@ -1,5 +1,5 @@
 import { v4 } from "uuid";
-import "./styles.css";
+import {CarsContainer, CarsContainerH1, CarCard, CarBrand, CarPrice, CarFuel} from "./styles"
 import {type Car} from "./types"
 
 const cars: Car[] = [
@@ -12,22 +12,22 @@ const cars: Car[] = [
 
 const carsCard = cars.map((car : Car) => {
   return (
-    <div key={v4()} className="car_card">
-      <h2 className="car_brand">Модель : {car.brand}</h2>
-      <p className="car_price">Цена : {car.price}</p>
-      <p className="car_fuel">
+    <CarCard key={v4()}>
+      <CarBrand> Модель : {car.brand}</CarBrand>
+      <CarPrice> Цена : {car.price}</CarPrice>
+      <CarFuel>
         Тип топлива : {car.isDiesel ? "Дизель" : "Бензин"}
-      </p>
-    </div>
+      </CarFuel>
+    </CarCard>
   );
 });
 
 function Homework_06() {
   return (
-    <div className="cars_container">
-      <h1>Список автомобилей</h1>
+    <CarsContainer>
+      <CarsContainerH1>Список автомобилей</CarsContainerH1>
       {carsCard}
-    </div>
+    </CarsContainer>
   );
 }
 

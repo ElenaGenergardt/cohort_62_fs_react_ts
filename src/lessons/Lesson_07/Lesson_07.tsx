@@ -1,10 +1,11 @@
+
 import { useState } from "react";
 
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
 import Counter from "components/Counter/Counter";
 
-import "./styles.css";
+import {Lesson07PageWrapper} from "./styles";
 import { WEATHER_CODES } from "./types";
 // !! Есть 2 основных способа вызова перерендера(обновления) компонента:
 // 1 - изменения state(посредством вызова функции setState())
@@ -120,11 +121,11 @@ function Lesson_07() {
     console.log("Отправка данных на сервер", count);
   };
    
-  return <div className="lesson_07_page_wrapper">
+  return <Lesson07PageWrapper>
     <Button name="Send request" onClick={sendRequest}/>
-    <Input name="UserName" label="User Name"/>
+    <Input name="UserName" label="User Name" id={""} placeholder={""}/>
     <Counter count={count} onMinus={onMinus} onPlus={onPlus} />
-  </div>;
+  </Lesson07PageWrapper>;
 }
 
 export default Lesson_07;
