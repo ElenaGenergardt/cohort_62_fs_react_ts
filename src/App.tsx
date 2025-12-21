@@ -10,6 +10,7 @@ import GlobalStyles from "styles/GlobalStyles";
 // import Lesson_10 from "lessons/Lesson_10/Lesson_10";
 // import Homework_10 from "homeworks/Homework_10/Homework_10";
 import Homework_11 from "homeworks/Homework_11/Homework_11";
+import Lesson_12 from "lessons/Lesson_12/Lesson_12";
 
 
 
@@ -29,8 +30,9 @@ function App() {
   {/* <Homework_09 /> */}
   {/* <Lesson_10 /> */}
   {/* <Homework_10 /> */}
-  <Homework_11/>
+  {/* <Homework_11/> */}
   {/* <Test/> */}
+  <Lesson_12 />
   </>
   );
 }
