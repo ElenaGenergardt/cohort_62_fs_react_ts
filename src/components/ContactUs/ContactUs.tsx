@@ -29,8 +29,8 @@ function ContactUs() {
     },
     validationSchema: validationSchema,
     validateOnChange: false,
-    onSubmit: (values, helpers) => {
-      console.log(values, helpers);
+    onSubmit: (values) => {
+      console.log(values);
     },
   });
   return (
