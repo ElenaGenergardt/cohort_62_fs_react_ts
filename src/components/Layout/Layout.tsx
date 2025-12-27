@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
   LayoutWrapper,
   Header,
@@ -10,47 +11,53 @@ import {
   FooterLogo,
   FooterLink,
   FooterNavigation,
+  getActiveStyles,
 } from "./styles";
 import { type LayoutProps } from "./types";
 
 function Layout({ children }: LayoutProps) {
+  const navigate = useNavigate();
+
+  const goToHomePage = () => {
+    navigate("/")
+  }
   return (
     <LayoutWrapper>
       <Header>
-        <Logo>
+        <Logo onClick={goToHomePage}>
           <LogoImg
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
             alt="Logo"
           />
         </Logo>
         <NavigationContainer>
-          <HeaderLink
-            style={({ isActive }) => ({
-              fontWeight: isActive ? "bold" : "normal",
-              textDecoration: isActive ? "underline" : "none",
-            })}
-            to="/"
-          >
+          <HeaderLink style={getActiveStyles} to="/">
             Home
           </HeaderLink>
-          <HeaderLink to="">Contact Us</HeaderLink>
-          <HeaderLink to="/about">About</HeaderLink>
-          <HeaderLink to="/login">Login</HeaderLink>
+          <HeaderLink style={getActiveStyles} to="/contactUs">
+            Contact Us
+          </HeaderLink>
+          <HeaderLink style={getActiveStyles} to="/about">
+            About
+          </HeaderLink>
+          <HeaderLink style={getActiveStyles} to="/login">
+            Login
+          </HeaderLink>
         </NavigationContainer>
       </Header>
       <Main>{children}</Main>
       <Footer>
-        <FooterLogo>
+        <FooterLogo onClick={goToHomePage}>
           <LogoImg
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
             alt="Logo"
           />
         </FooterLogo>
         <FooterNavigation>
-          <FooterLink href="#">Home</FooterLink>
-          <FooterLink href="#">Contact Us</FooterLink>
-          <FooterLink href="#">About</FooterLink>
-          <FooterLink href="#">Login</FooterLink>
+          <FooterLink to="/">Home</FooterLink>
+          <FooterLink to="/contactUs">Contact Us</FooterLink>
+          <FooterLink to="/about">About</FooterLink>
+          <FooterLink to="/login">Login</FooterLink>
         </FooterNavigation>
       </Footer>
     </LayoutWrapper>

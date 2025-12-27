@@ -21,6 +21,7 @@ const validationSchema = Yup.object().shape({
 });
 
 function ContactUs() {
+  // name у элементов формы должен совпадать с ключом обьекта initialValues
   const formik = useFormik({
     initialValues: {
       [CONTACT_US_VALUES.FULLNAME]: "",

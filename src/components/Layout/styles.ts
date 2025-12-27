@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import {NavLink} from "react-router-dom";
+import { NavLink, type NavLinkRenderProps, Link } from "react-router-dom";
 export const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -72,8 +72,13 @@ export const FooterNavigation = styled.nav`
   gap: 10px;
 `;
 
-export const FooterLink = styled.a`
+export const FooterLink = styled(Link)`
   color: white;
   font-size: 14px;
   font-weight: bold;
 `;
+
+export const getActiveStyles =({ isActive } : NavLinkRenderProps ) => ({
+              fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
+            });
