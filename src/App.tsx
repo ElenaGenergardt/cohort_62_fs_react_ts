@@ -23,6 +23,10 @@ import Home from "pages/EmployeeApp/Home/Home";
 import About from "pages/EmployeeApp/About/About";
 import LogIn from "pages/EmployeeApp/LogIn/LogIn";
 import ContactUs from "components/ContactUs/ContactUs";
+import Clients from "pages/Clients/Clients";
+import Valencia from "pages/Clients/Valencia/Valencia";
+import Sigma from "pages/Clients/Sigma/Sigma";
+import X_Ivision from "pages/Clients/X_Ivision/X_Ivision";
 
 
 function App() {
@@ -39,6 +43,11 @@ function App() {
       <Route path="/login" element= {<LogIn/>}></Route>
        <Route path="/contactUs" element= {<ContactUs/>}></Route>
         <Route path="*" element= "Page Not Found"></Route>
+        <Route path="/clients" element= {<Clients/>}></Route>
+        <Route path="/valencia" element= {<Valencia/>}></Route>
+        <Route path="/sigma" element= {<Sigma/>}></Route>
+        <Route path="/x_ivision" element= {<X_Ivision/>}></Route>
+       
   </Routes>
  </Layout>
   {/* <Lesson_08 /> */}
