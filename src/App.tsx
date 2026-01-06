@@ -46,7 +46,7 @@ function App() {
         <Route path="/clients" element= {<Clients/>}></Route>
         <Route path="/valencia" element= {<Valencia/>}></Route>
         <Route path="/sigma" element= {<Sigma/>}></Route>
-        <Route path="/x_ivision" element= {<X_Ivision/>}></Route>
+        <Route path="/clients/x_ivision" element= {<X_Ivision/>}></Route>
        
   </Routes>
  </Layout>
