@@ -43,6 +43,9 @@ function Layout({ children }: LayoutProps) {
           <HeaderLink style={getActiveStyles} to="/login">
             Login
           </HeaderLink>
+          <HeaderLink style={getActiveStyles} to="/clients">
+            Clients
+          </HeaderLink>
         </NavigationContainer>
       </Header>
       <Main>{children}</Main>
