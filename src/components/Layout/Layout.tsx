@@ -14,6 +14,7 @@ import {
   getActiveStyles,
 } from "./styles";
 import { type LayoutProps } from "./types";
+import { ROUTES } from "constants/routes";
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate();
@@ -31,19 +32,19 @@ function Layout({ children }: LayoutProps) {
           />
         </Logo>
         <NavigationContainer>
-          <HeaderLink style={getActiveStyles} to="/">
+          <HeaderLink style={getActiveStyles} to={ROUTES.HOME}>
             Home
           </HeaderLink>
-          <HeaderLink style={getActiveStyles} to="/contactUs">
+          <HeaderLink style={getActiveStyles} to={ROUTES.CONTACT_US}>
             Contact Us
           </HeaderLink>
-          <HeaderLink style={getActiveStyles} to="/about">
+          <HeaderLink style={getActiveStyles} to={ROUTES.ABOUT}>
             About
           </HeaderLink>
-          <HeaderLink style={getActiveStyles} to="/login">
+          <HeaderLink style={getActiveStyles} to={ROUTES.LOGIN}>
             Login
           </HeaderLink>
-          <HeaderLink style={getActiveStyles} to="/clients">
+          <HeaderLink style={getActiveStyles} to={ROUTES.CLIENTS}>
             Clients
           </HeaderLink>
         </NavigationContainer>
@@ -57,10 +58,11 @@ function Layout({ children }: LayoutProps) {
           />
         </FooterLogo>
         <FooterNavigation>
-          <FooterLink to="/">Home</FooterLink>
-          <FooterLink to="/contactUs">Contact Us</FooterLink>
-          <FooterLink to="/about">About</FooterLink>
-          <FooterLink to="/login">Login</FooterLink>
+          <FooterLink to={ROUTES.HOME}>Home</FooterLink>
+          <FooterLink to={ROUTES.CONTACT_US}>Contact Us</FooterLink>
+          <FooterLink to={ROUTES.ABOUT}>About</FooterLink>
+          <FooterLink to={ROUTES.LOGIN}>Login</FooterLink>
+          <FooterLink to={ROUTES.CLIENTS}>Clients</FooterLink>
         </FooterNavigation>
       </Footer>
     </LayoutWrapper>
