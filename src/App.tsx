@@ -29,6 +29,7 @@ import Sigma from "pages/Clients/Sigma/Sigma";
 import X_Ivision from "pages/Clients/X_Ivision/X_Ivision";
 import { ROUTES } from "constants/routes";
 import Lesson_14 from "lessons/Lesson_14/Lesson_14";
+import Homework_14 from "homeworks/Homework_14/Homework_14";
 
 
 function App() {
@@ -61,7 +62,8 @@ function App() {
   {/* <Homework_11/> */}
   {/* <Test/> */}
   {/* <Lesson_12 /> */}
-  <Lesson_14 />
+  {/* <Lesson_14 /> */}
+  <Homework_14 />
   </BrowserRouter>
   );
 }
