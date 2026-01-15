@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { BlogManagementContext } from "../BlogManagement/BlogManagement";
-import {MessageText} from "./styles"
+import { MessageText } from "./styles";
 function Message() {
   const { message } = useContext(BlogManagementContext);
 
