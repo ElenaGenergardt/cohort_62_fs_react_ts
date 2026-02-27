@@ -1,5 +1,5 @@
 // Импортируем BrowserRouter, Route, Routes для настройки маршрутизации
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 // Lessons
 import GlobalStyles from "styles/GlobalStyles";
@@ -18,7 +18,6 @@ import GlobalStyles from "styles/GlobalStyles";
 // import Homework_10 from "homeworks/Homework_10/Homework_10";
 // import Homework_11 from "homeworks/Homework_11/Homework_11";
 
-import Layout from "components/Layout/Layout";
 import Home from "pages/EmployeeApp/Home/Home";
 import About from "pages/EmployeeApp/About/About";
 import LogIn from "pages/EmployeeApp/LogIn/LogIn";
@@ -29,6 +28,12 @@ import Sigma from "pages/Clients/Sigma/Sigma";
 import X_Ivision from "pages/Clients/X_Ivision/X_Ivision";
 import { ROUTES } from "constants/routes";
 import Lesson_14 from "lessons/Lesson_14/Lesson_14";
+import Homework_14 from "homeworks/Homework_14/Homework_14";
+import Homework_15 from "homeworks/Homework_15/Homework_15";
+import Create_Employee from "pages/Create_Employee/Create_Employee";
+import Employee from "pages/Employees/Employees";
+import Employees from "pages/Employees/Employees";
+import Layout from "pages/Layout/Layout";
 
 
 function App() {
@@ -61,7 +66,17 @@ function App() {
   {/* <Homework_11/> */}
   {/* <Test/> */}
   {/* <Lesson_12 /> */}
-  <Lesson_14 />
+  {/* <Lesson_14 /> */}
+  {/* <Homework_14 /> */}
+  {/* <Homework_15 /> */}
+       <Layout>
+        <Routes>
+<Route path="/Create_Employee" element={<Create_Employee />} />
+        <Route path="/employees" element={<Employees />} />
+        <Route path="*" element={<Navigate to="/create" />} />
+          
+        </Routes>
+      </Layout>
   </BrowserRouter>
   );
 }
